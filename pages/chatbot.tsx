@@ -99,7 +99,7 @@ const Chatbot = () => {
     setCloseState(true);
 
     const response = await fetch(
-      'http://13.126.15.131:7000/chat-close-by-user',
+      'https://raja-chatbot-backend.vercel.app/chat-close-by-user',
       {
         method: 'POST',
         headers: {
@@ -129,7 +129,7 @@ const Chatbot = () => {
         console.log('----------', id);
         const interval = setInterval(async () => {
           const response = await fetch(
-            'http://13.126.15.131:7000/live-chat-agent',
+            'https://raja-chatbot-backend.vercel.app/live-chat-agent',
             {
               method: 'POST',
               headers: {
@@ -156,7 +156,7 @@ const Chatbot = () => {
               } else {
                 setImgLiveBot('agent');
                 setAgentImage(
-                  'http://13.126.15.131:7000/uploads/' +
+                  'https://raja-chatbot-backend.vercel.app/uploads/' +
                   data.profile_picture,
                 );
               }
@@ -259,7 +259,7 @@ const Chatbot = () => {
     try {
       
       const response = await fetch(
-        'http://13.126.15.131:7000/raja-chat-bot-api',
+        'https://raja-chatbot-backend.vercel.app/raja-chat-bot-api',
         {
           method: 'POST',
           headers: {
@@ -365,7 +365,7 @@ const Chatbot = () => {
   
         // translate to sinhala
         const response = await fetch(
-          'http://13.126.15.131:7000/raja-chat-bot-api',
+          'https://raja-chatbot-backend.vercel.app/raja-chat-bot-api',
           {
             method: 'POST',
             headers: {
@@ -558,7 +558,7 @@ const Chatbot = () => {
     }));
     if (liveAgent === true) {
       const response = await fetch(
-        'http://13.126.15.131:7000/live-chat-user',
+        'https://raja-chatbot-backend.vercel.app/live-chat-user',
         {
           method: 'POST',
           headers: {
@@ -580,7 +580,7 @@ const Chatbot = () => {
   const SwitchToLiveAgent = async () => {
     // console.log('========== Switch to live agent =========')
     const response = await fetch(
-      'http://13.126.15.131:7000/switch-to-live-agent',
+      'https://raja-chatbot-backend.vercel.app/switch-to-live-agent',
       {
         method: 'POST',
         headers: {

@@ -74,7 +74,7 @@ const LiveAgent = () => {
     setCloseState(true);
 
     const response = await fetch(
-      'http://13.126.15.131:7000/chat-close-by-user',
+      'https://raja-chatbot-backend.vercel.app/chat-close-by-user',
       {
         method: 'POST',
         headers: {
@@ -108,7 +108,7 @@ const LiveAgent = () => {
         console.log('dasd', id);
         intervalId = setInterval(async () => {
           const response = await fetch(
-            'http://13.126.15.131:7000/live-chat-agent',
+            'https://raja-chatbot-backend.vercel.app/live-chat-agent',
             {
               method: 'POST',
               headers: {
@@ -135,7 +135,7 @@ const LiveAgent = () => {
                 setAgentImage('/chat-header.png');
               } else {
                 setAgentImage(
-                  'http://13.126.15.131:7000/uploads/' +
+                  'https://raja-chatbot-backend.vercel.app/uploads/' +
                     data.profile_picture,
                 );
               }
@@ -158,7 +158,7 @@ const LiveAgent = () => {
             } else {
               if (counter > 5) {
                 const response = await fetch(
-                  'http://13.126.15.131:7000/chat-timeout',
+                  'https://raja-chatbot-backend.vercel.app/chat-timeout',
                   {
                     method: 'POST',
                     headers: {
@@ -233,7 +233,7 @@ const LiveAgent = () => {
 
     // send user message
     const response = await fetch(
-      'http://13.126.15.131:7000/live-chat-user',
+      'https://raja-chatbot-backend.vercel.app/live-chat-user',
       {
         method: 'POST',
         headers: {
